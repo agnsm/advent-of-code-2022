@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-function part1(file: string) {
+function part1(file: string): number {
   const elves = file
     .split('\n\n')
     .map(calories => calories.split('\n').map(val => Number(val)));
@@ -12,7 +12,7 @@ function part1(file: string) {
   return totalCalories[0];
 }
 
-function part2(file: string) {
+function part2(file: string): number {
   const elves = file
     .split('\n\n')
     .map(calories => calories.split('\n').map(val => Number(val)));
@@ -25,7 +25,7 @@ function part2(file: string) {
 }
 
 function main() {
-  const file = readFileSync('../inputs/day1.txt', 'utf-8');
+  const file = readFileSync('../inputs/day1.txt', 'utf-8').trim();
   console.log(part1(file));
   console.log(part2(file));
 }
