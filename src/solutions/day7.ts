@@ -102,7 +102,7 @@ function part1(file: string): number {
   const fileSystem = new FileSystem(new Directory('/'));
   const sizes = fileSystem.calculateSizes(data);
 
-  return sizes.reduce((acc, val) => val <= maxDirectorySize ? acc += val : acc);
+  return sizes.reduce((acc, val) => val <= maxDirectorySize ? acc + val : acc);
 }
 
 function part2(file: string): number {
